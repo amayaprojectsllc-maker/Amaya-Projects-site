@@ -24,26 +24,49 @@ if (phoneInput) {
   phoneInput.setAttribute('inputmode', 'numeric');
   phoneInput.setAttribute('maxlength', '14');
 
-  phoneInput.addEventListener('input', () => {
+  const formatPhone = (digits) => {
+    digits = digits.replace(/\D/g, '').slice(0, 10);
+
+    if (digits.length === 0) return '';
+    if (digits.length < 3) return `(${digits}`;
+    if (digits.length === 3) return `(${digits})`;
+    if (digits.length <= 6) return `(${digits.slice(0, 3)})-${digits.slice(3)}`;
+    return `(${digits.slice(0, 3)})-${digits.slice(3, 6)}-${digits.slice(6)}`;
+  };
+
+  phoneInput.addEventListener('input', (event) => {
     const digits = phoneInput.value.replace(/\D/g, '').slice(0, 10);
-    let formatted = '';
+    phoneInput.value = formatPhone(digits);
+  });
 
-    if (digits.length > 0) {
-      formatted = `(${digits.slice(0, 3)}`;
-    }
-    if (digits.length >= 3) {
-      formatted += ')-';
-    }
-    if (digits.length > 3) {
-      formatted += digits.slice(3, 6);
-    }
-    if (digits.length >= 6) {
-      formatted += '-';
-    }
-    if (digits.length > 6) {
-      formatted += digits.slice(6, 10);
-    }
+  phoneInput.addEventListener('keydown', (event) => {
+    if (event.key !== 'Backspace') return;
 
-    phoneInput.value = formatted;
+    const start = phoneInput.selectionStart;
+    const end = phoneInput.selectionEnd;
+
+    if (start !== end || start === 0) return;
+
+    const value = phoneInput.value;
+    const charBefore = value[start - 1];
+
+    if (charBefore === '-' || charBefore === ')') {
+      event.preventDefault();
+
+      let digitIndex = -1;
+      for (let i = start - 2; i >= 0; i--) {
+        if (/\d/.test(value[i])) {
+          digitIndex = i;
+          break;
+        }
+      }
+
+      if (digitIndex >= 0) {
+        const newValue = value.slice(0, digitIndex) + value.slice(digitIndex + 1);
+        const formatted = formatPhone(newValue);
+        phoneInput.value = formatted;
+        phoneInput.setSelectionRange(formatted.length, formatted.length);
+      }
+    }
   });
 }
