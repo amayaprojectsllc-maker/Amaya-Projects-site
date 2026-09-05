@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 74" role="img" aria-labelledby="title">
+  <title id="title">Amaya Projects AP mark</title>
+  <defs>
+    <mask id="cutouts">
+      <rect width="120" height="74" fill="white"/>
+      <polygon points="36,58 49,41 57,58" fill="black"/>
+      <polygon points="58,8 65,8 76,66 69,66" fill="black"/>
+      <path d="M78 25 H99 C104 25 108 29 108 34 C108 39 104 43 99 43 H82 Z" fill="black"/>
+    </mask>
+  </defs>
+  <g mask="url(#cutouts)" fill="currentColor">
+    <path d="M5 66 L50 8 H63 L78 66 H62 L56 46 L42 66 Z"/>
+    <path d="M63 8 H96 C109 8 117 18 117 31 C117 44 108 54 96 54 H77 V66 H63 Z"/>
+  </g>
+</svg>
