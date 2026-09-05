@@ -228,7 +228,7 @@
           </div>
         </div>
 
-        <form class="quote-form" name="project-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form class="quote-form" name="project-quote" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="project-quote" />
           <p class="hidden">
             <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -241,18 +241,18 @@
             </label>
             <label>
               Phone
-              <input type="tel" name="phone" required placeholder="(214) 555-0123" />
+              <input type="tel" name="phone" required />
             </label>
           </div>
 
           <div class="form-row">
             <label>
               Email
-              <input type="email" name="email" placeholder="you@example.com" />
+              <input type="email" name="email" />
             </label>
             <label>
               City
-              <input type="text" name="city" required placeholder="Garland, Dallas, Plano..." />
+              <input type="text" name="city" required />
             </label>
           </div>
 

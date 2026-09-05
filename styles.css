@@ -49,7 +49,8 @@ textarea {
   top: 0;
   z-index: 30;
   background: rgba(244, 246, 248, 0.94);
-  backdrop-
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
 }
 
@@ -690,5 +691,79 @@ footer {
 
   .brand {
     gap: 8px;
+  }
+}
+
+
+/* Branded form confirmation page */
+.thank-you-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.thank-you-header {
+  position: static;
+}
+
+.thank-you-wrap {
+  min-height: calc(100vh - 77px);
+  display: grid;
+  place-items: center;
+  padding: 56px 0 72px;
+}
+
+.thank-you-card {
+  width: min(680px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 56px;
+  box-shadow: 0 24px 70px rgba(11, 31, 51, 0.10);
+  text-align: center;
+}
+
+.thank-you-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--dark);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.thank-you-card h1 {
+  margin: 0 0 14px;
+  font-size: clamp(42px, 7vw, 64px);
+}
+
+.thank-you-card p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.thank-you-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 620px) {
+  .thank-you-wrap {
+    padding: 34px 0 52px;
+  }
+
+  .thank-you-card {
+    padding: 40px 24px;
+    border-radius: 22px;
+  }
+
+  .thank-you-actions .btn {
+    width: 100%;
   }
 }
