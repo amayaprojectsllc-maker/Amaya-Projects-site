@@ -425,7 +425,7 @@ h3 {
 }
 
 .quote-section {
-  background: #e9e5dc;
+  background: #ffffff;
 }
 
 .quote-grid {
@@ -681,15 +681,6 @@ footer {
   overflow: hidden;
 }
 
-.hero-logo-watermark {
-  position: absolute;
-  top: 34px;
-  right: 30px;
-  width: min(180px, 42%);
-  opacity: .12;
-  
-  pointer-events: none;
-}
 
 @media (max-width: 560px) {
   .brand-mark {
@@ -699,11 +690,5 @@ footer {
 
   .brand {
     gap: 8px;
-  }
-
-  .hero-logo-watermark {
-    width: 145px;
-    right: 22px;
-    top: 26px;
   }
 }
