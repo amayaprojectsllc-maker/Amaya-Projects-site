@@ -49,7 +49,7 @@ textarea {
   top: 0;
   z-index: 30;
   background: rgba(244, 246, 248, 0.94);
-  backdrop-filter: blur(16px);
+  backdrop-
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
 }
 
@@ -673,7 +673,7 @@ footer {
 }
 
 .footer-mark {
-  filter: invert(1);
+  
 }
 
 .hero-card-inner {
@@ -687,7 +687,7 @@ footer {
   right: 30px;
   width: min(180px, 42%);
   opacity: .12;
-  filter: invert(1);
+  
   pointer-events: none;
 }
 
