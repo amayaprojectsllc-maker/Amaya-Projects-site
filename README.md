@@ -1,16 +1,11 @@
-# Amaya Projects Website — Final Build
+# Amaya Projects Website — v16 Fixed Images
 
-Includes:
-- Custom domain-ready static site for amayaprojectstx.com
-- Netlify project estimate form and custom thank-you page
-- Phone formatting and mobile-friendly form UX
-- Required-field asterisks, optional email label, red validation, auto-scroll/focus
-- Clean contact/social footer
-- Four representative service images and “See What We Do” section
-- Trust section
-- Local DFW SEO metadata and structured business data
-- Google Analytics 4: G-XT66GETWFG
-- Analytics events for estimate CTA, form submit, lead confirmation, phone clicks, and email clicks
+All four service photos are stored at the top level of the site so they are easy to upload to GitHub from iPhone.
 
-Important:
-The service images are representative stock images and are not labeled as completed Amaya Projects jobs.
+Upload EVERY file from this package, including:
+- remodeling-bathroom.jpg
+- staircase-railing.jpg
+- welding.jpg
+- flooring.jpg
+
+If any one of those JPG files is missing from GitHub, that photo will appear broken on the live site.
