@@ -767,3 +767,158 @@ footer {
     width: 100%;
   }
 }
+
+
+.footer-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.footer-group {
+  min-width: 0;
+}
+
+.footer-label {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.footer-group .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.footer-socials {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 1rem !important;
+}
+
+@media (max-width: 700px) {
+  .footer-groups {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .footer-group .footer-links {
+    gap: 0.45rem;
+  }
+
+  .footer-socials {
+    flex-direction: row !important;
+  }
+}
+
+
+/* Final content + UX polish */
+html {
+  scroll-behavior: smooth;
+}
+
+.work-image {
+  overflow: hidden;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  display: block;
+  object-fit: cover;
+}
+
+.stock-note {
+  margin: 1.25rem 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.trust-section {
+  background: #f4f6f8;
+}
+
+.trust-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.trust-card {
+  background: #fff;
+  border: 1px solid #d8dee6;
+  border-radius: 18px;
+  padding: 1.6rem;
+}
+
+.trust-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.08rem;
+}
+
+.trust-card p {
+  margin: 0;
+  color: #5f6b78;
+  line-height: 1.65;
+}
+
+.required-mark {
+  color: #b42318;
+}
+
+.optional-label {
+  color: #77818d;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.quote-form .field-error {
+  display: block;
+  margin-top: 0.4rem;
+  color: #b42318;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.quote-form input.is-invalid,
+.quote-form select.is-invalid,
+.quote-form textarea.is-invalid {
+  border-color: #b42318;
+  box-shadow: 0 0 0 1px #b42318;
+}
+
+.quote-form input.is-invalid:focus,
+.quote-form select.is-invalid:focus,
+.quote-form textarea.is-invalid:focus {
+  outline-color: #b42318;
+}
+
+.form-submit[disabled] {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+@media (max-width: 700px) {
+  .trust-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-image img {
+    min-height: 230px;
+  }
+
+  .btn,
+  .nav a,
+  .footer-links a {
+    min-height: 44px;
+  }
+}

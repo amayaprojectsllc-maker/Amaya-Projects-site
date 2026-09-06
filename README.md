@@ -1,33 +1,16 @@
-# Amaya Projects Website
+# Amaya Projects Website — Final Build
 
-This is a responsive static website for Amaya Projects LLC.
+Includes:
+- Custom domain-ready static site for amayaprojectstx.com
+- Netlify project estimate form and custom thank-you page
+- Phone formatting and mobile-friendly form UX
+- Required-field asterisks, optional email label, red validation, auto-scroll/focus
+- Clean contact/social footer
+- Four representative service images and “See What We Do” section
+- Trust section
+- Local DFW SEO metadata and structured business data
+- Google Analytics 4: G-XT66GETWFG
+- Analytics events for estimate CTA, form submit, lead confirmation, phone clicks, and email clicks
 
-## Included
-- Mobile-friendly layout
-- Services section
-- Project gallery placeholders
-- About/process section
-- Free estimate form
-- Netlify Forms support
-- Basic SEO metadata
-
-## Publish on Netlify
-1. Create a free Netlify account.
-2. Drag the entire `amaya-projects-site` folder into Netlify Drop.
-3. Netlify will publish the site and automatically detect the quote form.
-4. In Netlify, go to Forms to see submissions.
-5. Connect your custom domain in Domain Management.
-
-## Before publishing
-Replace placeholder project photos with your own real work.
-Update service wording if needed.
-Add phone/email buttons once you decide what business contact info you want public.
-
-## Add project photos
-Replace each:
-<div class="work-image placeholder"><span>Add project photo</span></div>
-
-with:
-<img class="work-image" src="images/project1.jpg" alt="Finished flooring project">
-
-Then create an `images` folder and put your photos there.
+Important:
+The service images are representative stock images and are not labeled as completed Amaya Projects jobs.
